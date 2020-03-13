@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+		
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Angular, noob => ninja</h3>
+					<img src="images/angular.svg" width="400px" alt="">
+				</section>
+				<section>
+					<h3>What is Angular ?</h3>
+					SPA <br>
+					Not updating index.html
+					<img src="images/source.png" alt="">
+				</section>
+				<section>
+					<h3>Angular vs Angular 2 versus angular 9</h3>
+					<div class="slide2_img float__none" data-title="1"><img src="images/angularjs.png"></div>
+					<div class="slide2_img" data-title="2"><img src="images/angular.svg"></div>
+					<div class="slide2_img" data-title="3"><img src="images/angular.svg"></div>
+					<div class="slide2_img" data-title="4"><img src="images/angular.svg"></div>
+					<div class="slide2_img" data-title="5"><img src="images/angular.svg"></div>
+					<div class="slide2_img" data-title="6"><img src="images/angular.svg"></div>
+					<div class="slide2_img" data-title="7"><img src="images/angular.svg"></div>
+					<div class="slide2_img" data-title="8"><img src="images/angular.svg"></div>
+					<div class="slide2_img" data-title="9"><img src="images/angular.svg"></div>
+				</section>
+				<section>
+					<h3>Angular CLI</h3>
+					<img src="images/cli.png" width="800px" alt="">
+				</section>
+				<section>
+					<h3>What do you need</h3>
+					NodeJS
+					<br>
+					Angular CLI
+				</section>
+				<section>
+					<h3>ng serve</h3>
+					keep it running
+				</section>
+				<section>
+					components, services, routing, modules, pipes, directives, operators, router-outlet, observables, typescript
+					ng-if, ng-for, subscribe, class, decorators..					
+				</section>
+				<section>
+					component
+				</section>
+				<section>
+					<h3>files</h3>
+						HTML - Typescript - scss - test
+					<br>
+					<br>
+					<h3>registration</h3>
+						app-modules
+						
+				</section>
+				<section>
+					<h2>Typescript</h2>
+					<pre>
+						<code class="hljs javascript">
+@Component({
+	selector: 'app-my-page',
+	templateUrl: './my-page.component.html',
+	styleUrls: ['./my-page.component.scss']
+})
+export class MyPageComponent implements OnInit {
+	title = 'hello World'
+	ngOnInit() {
+		
+	}
+}
+					</code>
+					
+				</section>
+
+				<section>
+					<h2>HTML</h2>
+					<pre>
+						<code class="hljs html">
+<h1>{{title}}</h1>
+<div>some text</div>
+{{ 1 + 1 }}
+						</code>
+					
+		<img src="images/helloWorld.png" alt="">
+				</section>
+
+				<section>
+					<h2>app-modules</h2>
+					<pre>
+						<code class="hljs javascript">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { MyPageComponent } from './my-page/my-page.component';
+
+@NgModule({
+	declarations: [
+		AppComponent,
+		MyPageComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
+})
+export class AppModule { }
+							
+					</code>
+					
+				</section>
+				<section>
+					<h3>Project</h3>
+				</section>
+				<section>
+					<img src="images/project/project_01.png" style="height: 800px" alt="">
+				</section>
+				<section>
+					<img src="images/project/project_02.png" style="height:800px" alt="">
+				</section>
+				<section>
+					<img src="images/project/project_03.png" style="height:800px" alt="">
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

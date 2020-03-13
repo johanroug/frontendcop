@@ -1,0 +1,29 @@
+.block {
+    display: block !important;
+}
+.float__none {
+    float: none !important;
+}
+
+.slide2_img {
+    position: relative;
+    float: left;
+    margin: 10px;
+    width: 10%;
+
+}
+
+.slide2_img:after {
+    content: attr(data-title);
+    position: absolute;
+    background: darkslategrey;
+    display: block;
+    top: 0;
+    right: -10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    padding: 10px;
+    line-height: 30px;
+}
