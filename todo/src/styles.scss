@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  box-sizing: content-box;
+}
+
+.box {
+  border: 2px solid #000;
+  padding: 10px;
+
+  &--blue {
+    border-color: blue;
+  }
+  &--red {
+    border-color: red;
+  }
+  &--green {
+    border-color: darkgreen;
+  }
+  &--orange {
+    border-color: orange;
+  }
+  &--grey {
+    border-color: grey;
+  }
+}
