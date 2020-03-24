@@ -4,9 +4,9 @@ App - component
   <pre>
     {{list | json}}
   </pre>
-  <app-list [list]="activeItems"></app-list>
+  <app-list [list]="activeItems" (itemState)="onChangeState($event)"></app-list>
 
-  <app-list [list]="inActiveItems"></app-list>
+  <app-list [list]="inActiveItems" (itemState)="onChangeState($event)"></app-list>
 
   <app-bottom></app-bottom>
 </div>

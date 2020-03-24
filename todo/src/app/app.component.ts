@@ -16,12 +16,21 @@ export class AppComponent implements OnInit {
       "id": 2,
       "active": false,
       "name": "Burger"
+    },
+    {
+      "id": 3,
+      "active": false,
+      "name": "milk"
     }
   ];
   activeItems = [];
   inActiveItems = [];
 
   ngOnInit() {
+    this.makeLists();
+  }
+
+  makeLists() {
     this.activeItems = this.filterList(true);
     this.inActiveItems = this.filterList(false);
   }
@@ -30,5 +39,16 @@ export class AppComponent implements OnInit {
     return this.list.filter(items => {
       return items.active === activeState;
     });
+  }
+
+  onChangeState(event) {
+    this.list = this.list.map(item => {
+      if (item.id === event.id) {
+        item.active = !item.active
+      }
+      return item;
+    });
+
+    this.makeLists();
   }
 }
