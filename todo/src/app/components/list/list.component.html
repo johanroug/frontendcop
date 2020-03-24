@@ -2,7 +2,7 @@ List - component
 <div class="list box box--orange">
   <div class="item-25" *ngFor="let item of list">
     <pre (click)="onClickHandler(item)">
-      {{item | json}}
+      {{item.name}}
     </pre>
   </div>
 </div>
