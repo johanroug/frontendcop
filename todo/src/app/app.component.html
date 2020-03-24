@@ -1,10 +1,12 @@
 App - component
 <div class="box">
   <app-header></app-header>
+  <pre>
+    {{list | json}}
+  </pre>
+  <app-list [list]="activeItems"></app-list>
 
-  <app-list></app-list>
-
-  <app-list></app-list>
+  <app-list [list]="inActiveItems"></app-list>
 
   <app-bottom></app-bottom>
 </div>

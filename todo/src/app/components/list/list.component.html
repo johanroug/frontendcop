@@ -1,21 +1,8 @@
 List - component
 <div class="list box box--orange">
-  <div class="item-25">
-    <app-item class="item"></app-item>
-  </div>
-  <div class="item-25">
-    <app-item class="item"></app-item>
-  </div>
-  <div class="item-25">
-    <app-item class="item"></app-item>
-  </div>
-  <div class="item-25">
-    <app-item class="item"></app-item>
-  </div>
-  <div class="item-25">
-    <app-item class="item"></app-item>
-  </div>
-  <div class="item-25">
-    <app-item class="item"></app-item>
+  <div class="item-25" *ngFor="let item of list">
+    <pre (click)="onClickHandler(item.id)">
+      {{item | json}}
+    </pre>
   </div>
 </div>
