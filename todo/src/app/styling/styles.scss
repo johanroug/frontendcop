@@ -1,5 +1,14 @@
+@import 'variables';
+@import 'bootstrap-import.scss';
+@import 'mixins';
+@import 'typography';
+
+
 html, body {
   box-sizing: content-box;
+}
+body {
+  background: $color_dark;
 }
 
 .box {

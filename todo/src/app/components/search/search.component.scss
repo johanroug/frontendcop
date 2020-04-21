@@ -1,0 +1,16 @@
+@import '../../styling/variables';
+
+.search {
+  background: $color_grey--dark;
+  color: $color_white;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  height: 50px;
+  padding: $grid-gutter-width / 2;
+
+  &::placeholder {
+    color: darken($color_white, 30);
+  }
+}

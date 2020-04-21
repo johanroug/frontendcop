@@ -1,20 +1,11 @@
+@import '../../styling/variables';
+
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-
-.item-25 {
-  height: 0;
-  padding-bottom: 25%;
-  flex: 0 0 25%;
-  position: relative;
-}
-
-.item {
-  position: absolute;
-  bottom: 10px;
-  top: 5px;
-  left: 5px;
-  right: 5px;
+  &__box {
+    background: $color_red;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: $grid-gutter-width;
+  }
 }

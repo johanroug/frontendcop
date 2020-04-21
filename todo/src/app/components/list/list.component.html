@@ -1,8 +1,11 @@
 List - component
-<div class="list box box--orange">
-  <div class="item-25" *ngFor="let item of list">
-    <pre (click)="onClickHandler(item)">
-      {{item.name}}
-    </pre>
+<div class="row">
+  <div class="col-4" *ngFor="let item of list" (click)="onClickHandler(item)">
+    <div class="list__box">
+      <img class="list__icon" src="https://via.placeholder.com/150" alt="">
+      <div>
+        {{item.name}}
+      </div>
+    </div>
   </div>
 </div>

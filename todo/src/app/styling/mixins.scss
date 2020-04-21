@@ -1,0 +1,18 @@
+@mixin font-size($sizeValue) {
+  font-size: ($sizeValue / 16) + rem;
+}
+
+@mixin line-height($sizeValue) {
+  line-height: ($sizeValue / 16) + rem;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin bold() {
+  font-weight: normal;
+  text-shadow: 0 0 0 #000;
+}

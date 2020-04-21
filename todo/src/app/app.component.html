@@ -1,9 +1,8 @@
-App - component
-<div class="box">
+<div class="container-fluid">
   <app-header></app-header>
-  <pre>
+  <!-- <pre>
     {{list | json}}
-  </pre>
+  </pre> -->
   <app-list [list]="activeItems" (itemState)="onChangeState($event)"></app-list>
 
   <app-list [list]="inActiveItems" (itemState)="onChangeState($event)"></app-list>

@@ -1,0 +1,13 @@
+@import 'mixins';
+
+body {
+  font-size: $font-size-base + px;
+  line-height: $line-height-base + px;
+  color: $color_white;
+}
+
+h1 {
+  @include font-size(20);
+  // @include transform( rotate(10deg));
+  // @include transform( scale(-1, 1));
+}
