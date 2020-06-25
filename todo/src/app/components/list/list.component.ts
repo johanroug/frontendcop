@@ -1,4 +1,5 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { StateManagementService } from '../../services/state-management.service';
 
 
 @Component({
@@ -6,12 +7,31 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent {
-  @Input() list = [];
-  @Output() itemState = new EventEmitter();
+export class ListComponent implements OnInit {
+  @Input() state;
+  list = [];
+  listFilter = [];
+
+  constructor(
+    private stateService: StateManagementService
+  ) {}
+
+  ngOnInit() {
+    this.stateService.globalList.subscribe(data => {
+      this.list = data;
+      this.listFilter = this.filterList(this.state);
+    });
+  }
+
+  filterList(state) {
+    return this.list.filter(items => {
+      return items.active === state;
+    });
+  }
 
   onClickHandler(item) {
-    this.itemState.emit(item);
+    item.active = !item.active;
+    this.stateService.globalList.next(this.list);
   }
 }
 
