@@ -3,9 +3,9 @@
   <!-- <pre>
     {{list | json}}
   </pre> -->
-  <app-list [list]="activeItems" (itemState)="onChangeState($event)"></app-list>
+  <app-list [active]="true"></app-list>
 
-  <app-list [list]="inActiveItems" (itemState)="onChangeState($event)"></app-list>
+  <app-list [active]="false"></app-list>
 
   <app-bottom></app-bottom>
 </div>
